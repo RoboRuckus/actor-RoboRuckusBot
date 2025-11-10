@@ -1,0 +1,52 @@
+{
+	"name": "actor-RoboRuckusBot",
+	"version": "1.0.0",
+	"description": "Controls a RoboRuckus robot",
+	"keywords": "Fabrica-IO, actor, roboruckus",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/RoboRuckus/actor-RoboRuckusBot.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://RoboRuckus.com"
+	  }
+	],
+	"dependencies": {
+		"Webhook": "https://github.com/FabricaIO/util-Webhook",
+		"RoboRuckusDevice": "https://github.com/RoboRuckus/util-RoboRuckusDevice"
+	  },
+	"license": "GPLv3",
+	"homepage": "https://RoboRuckus.com",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabricaio" : {
+		"name": "RuckusBot",
+		"type": 1,
+		"category": "robot",
+		"libname": "RoboRuckusBot",
+		"includes": ["RoboRuckusBot"],
+		"description": "Controls a RoboRuckus robot",
+		"constructor":
+		[
+			[	
+				{
+					"name": "server_url",
+					"type": "String",
+					"description": "Full URL of the game server",
+					"default": ""
+				},
+				{
+					"name": "configFile",
+					"type": "String",
+					"description": "The name of the config file",
+					"default": "RuckusBot.json"
+				}
+			]
+		]
+	}
+  }
