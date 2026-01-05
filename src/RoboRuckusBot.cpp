@@ -203,6 +203,10 @@ bool RoboRuckusBot::processCommandQueue()
 				if (r != NULL) {
 					r->receiveEvent(payload);
 				}
+				if (payload->event == RoboRuckusDevice::Events::MOVEFINISH) {
+					// Notify server that a signal was received indicating a move completed
+					communicator.moveComplete();
+				}
 			} else {
 				Logger.println("Pointer in event was null");
 			}

@@ -27,7 +27,7 @@ void RuckusCommunicator::setURL(String url) {
 }
 
 /// @brief Sends a signal to the server indicating the robot has finished moving
-void RuckusCommunicator::moveCompelete() {
+void RuckusCommunicator::moveComplete() {
 	String content = "{\"bot\":" + String(Config.robotID) + "}";
 	JsonDocument response;
 	int tries = 0;
