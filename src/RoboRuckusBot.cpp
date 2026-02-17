@@ -33,7 +33,7 @@ bool RoboRuckusBot::begin() {
 	success = enableTask(true);
 	// Create setup task
 	if (success) {
-		success = xTaskCreate(setupTaskWrapper, "RoboRuckus Setup", 2048, this, 2, NULL) == pdPASS;
+		success = xTaskCreate(setupTaskWrapper, "RoboRuckus Setup", 4096, this, 2, NULL) == pdPASS;
 	}
 	return success;
 }
