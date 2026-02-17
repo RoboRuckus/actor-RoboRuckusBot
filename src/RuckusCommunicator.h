@@ -61,6 +61,6 @@ class RuckusCommunicator {
 		bool begin();
 		String getURL();
 		void setURL(String url);
-		void moveCompelete();
+		void moveComplete();
 		String callHook(String content, HTTP_Methods method, String path);
 };
